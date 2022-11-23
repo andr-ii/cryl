@@ -1,0 +1,65 @@
+{
+  "name": "@andr-ll/cryl",
+  "version": "0.1.0",
+  "license": "ISC",
+  "description": "A password encryption/decryption cli tool",
+  "keywords": [
+    "encryption",
+    "password-encryption",
+    "node.js",
+    "cli"
+  ],
+  "author": "andr_ll",
+  "preferGlobal": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "bin": {
+    "cryl": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andr-ll/cryl.git"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "help"
+  ],
+  "scripts": {
+    "start": "ts-node ./src",
+    "build": "run-s build:lib build:bin",
+    "build:lib": "tsc",
+    "build:bin": "./scripts/build.sh",
+    "types": "tsc --noEmit",
+    "format": "prettier --write '**/*.{js,json,md,ts,yml,yaml}'",
+    "format:check": "prettier --check '**/*.{js,json,md,ts,yml,yaml}'",
+    "lint": "eslint --fix '**/*.ts'",
+    "lint:check": "eslint '**/*.ts'",
+    "spell": "cspell '**/*'",
+    "husky:init": "./scripts/add_husky.sh",
+    "init": "run-s build husky:init"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "cspell": "^6.8.1",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "publishConfig": {
+    "@andr-ll:registry": "https://npm.pkg.github.com"
+  }
+}

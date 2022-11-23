@@ -1,0 +1,25 @@
+
+Usage: cryl ENCRYPT_OR_DECRYPT [OPTIONS]
+
+A password encryption/decryption cli tool.
+
+ENCRYPT_OR_DECRYPT:
+  enc                 Command to encrypt data
+  dec                 Command to decrypt data
+
+OPTIONS:
+  -v                  The raw string value which will be encrypted/decrypted
+  -p                  A password values. Length must be more than 6 characters
+  -f                  A path to the file which will be encrypted/decrypted
+  -o                  A path to the output file
+
+
+Examples:
+
+  $ cryl enc -v some-string -p some-password                     | Encrypts "some-string" string and prints result to stdout.
+
+  $ cryl dec -v RgkFVBoFBwluDK4tRZOjgw== -p some-password        | Decrypts "RgkFVBoFBwluDK4tRZOjgw==" string and prints result to stdout.
+
+  $ cryl enc -f path/to/file.json -p some-password -o ./out.key  | Encrypts file and prints output to "./out.key" file.
+
+  $ cryl dec -f ./out.key -p some-password                       | Decrypts file and prints result to stdout.

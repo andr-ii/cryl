@@ -1,4 +1,4 @@
-import { ParsedFlags } from '../types';
+import { Options } from '../types';
 import { EncryptionType } from '../utils/constants';
 import { validateOptions } from './validator';
 import { decrypt } from './decrypt';
@@ -11,11 +11,16 @@ const encryptionHandlerByType = {
 
 export const encryptOrDecrypt = async (
   type: EncryptionType,
-  options: ParsedFlags,
+  options: Options,
+  isPackage: boolean,
 ) => {
-  const { input, output, cipherOrDecipher } = validateOptions(type, options);
+  const { input, output, cipherOrDecipher } = validateOptions(
+    type,
+    options,
+    isPackage,
+  );
 
   const handler = encryptionHandlerByType[type];
 
-  await handler(input, output, cipherOrDecipher);
+  return handler(input, output, cipherOrDecipher);
 };

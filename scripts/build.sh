@@ -9,4 +9,4 @@ chmod 755 ./bin/index.js
 
 echo "#!/usr/bin/env node
 
-require('../lib').main();" > ./bin/index.js
+require('../lib').default();" > ./bin/index.js

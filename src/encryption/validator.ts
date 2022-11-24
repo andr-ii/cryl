@@ -1,4 +1,4 @@
-import { ParsedFlags } from '../types';
+import { Options } from '../types';
 import * as fs from 'fs';
 import { Readable } from 'stream';
 import { ALGORITHM, EncryptionType } from '../utils/constants';
@@ -9,8 +9,14 @@ const encryptionConstructorByType = {
   [EncryptionType.Decrypt]: createDecipheriv,
 };
 
-export const validateOptions = (type: EncryptionType, options: ParsedFlags) => {
-  const { password, inputFile, outputFile, value } = options;
+export const validateOptions = (
+  type: EncryptionType,
+  options: Options,
+  isPackage: boolean,
+) => {
+  const { password, inputFile, value } = options;
+  const outputFile =
+    options.outputFile == null && isPackage ? '/dev/null' : options.outputFile;
 
   if (type === EncryptionType.Encrypt && (password?.trim().length ?? '') < 6) {
     throw new Error('Password must be longer than 6 characters');
@@ -25,9 +31,8 @@ export const validateOptions = (type: EncryptionType, options: ParsedFlags) => {
   }
 
   try {
-    const output = (
-      outputFile == null ? process.stdout : fs.createWriteStream(outputFile)
-    ) as NodeJS.WritableStream;
+    const output =
+      outputFile == null ? process.stdout : fs.createWriteStream(outputFile);
 
     const input =
       inputFile == null

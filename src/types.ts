@@ -1,4 +1,4 @@
 import { EncryptionType, Flags, FlagValues } from './utils/constants';
 
-export type ParsedFlags = Partial<Record<typeof FlagValues[Flags], string>>;
-export type Options = { type: EncryptionType; values: ParsedFlags } | undefined;
+export type Options = Partial<Record<typeof FlagValues[Flags], string>>;
+export type MainOptions = { type: EncryptionType; values: Options } | undefined;

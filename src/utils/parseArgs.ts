@@ -1,5 +1,5 @@
 import { EncryptionType, FlagsMap } from './constants';
-import { ParsedFlags } from '../types';
+import { Options } from '../types';
 
 export const parseArgs = () => {
   const type = process.argv[2] as EncryptionType;
@@ -12,7 +12,7 @@ export const parseArgs = () => {
   }
 
   const allArgs = process.argv.slice(3);
-  const parsedFlags: ParsedFlags = {};
+  const parsedFlags: Options = {};
 
   for (let i = 0; i < allArgs.length; i += 2) {
     const flag = allArgs[i];

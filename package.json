@@ -1,6 +1,6 @@
 {
   "name": "@andr-ll/cryl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "ISC",
   "description": "A password encryption/decryption cli tool",
   "keywords": [
@@ -36,6 +36,7 @@
     "lint": "eslint --fix '**/*.ts'",
     "lint:check": "eslint '**/*.ts'",
     "spell": "cspell '**/*'",
+    "version:check": "./scripts/version_check.sh",
     "husky:init": "./scripts/add_husky.sh",
     "init": "run-s build husky:init"
   },

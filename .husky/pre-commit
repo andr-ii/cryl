@@ -3,6 +3,7 @@
 
 set -e
 
+npm i --package-lock-only
 npm run format
 npm run lint
 npm run spell

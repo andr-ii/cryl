@@ -1,8 +1,6 @@
 name: Pull Request CI
 
 on:
-  push:
-    branches: ['master']
   pull_request:
     branches: ['master']
 
@@ -66,3 +64,19 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run version:check
+  merge:
+    needs:
+      - format
+      - lint
+      - spell
+      - version-check
+      - types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Start spell checking
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: echo 'merging is available'
+    timeout-minutes: 5

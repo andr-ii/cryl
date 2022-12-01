@@ -1,9 +1,9 @@
+# @andr-ll/cryl
+
 [![Pull Request CI](https://github.com/andr-ll/cryl/actions/workflows/continuous_integration.yml/badge.svg)](https://github.com/andr-ll/cryl/actions/workflows/continuous_integration.yml)
 [![Node.js Package Release](https://github.com/andr-ll/cryl/actions/workflows/release.yml/badge.svg)](https://github.com/andr-ll/cryl/actions/workflows/release.yml)
 
-# cryl
-
-### The password based encryption/decryption tool. Allows to encrypt string values or files. Available as a CLI-tool or js/ts package.
+The password based encryption/decryption tool. Allows to encrypt string values or files. Available as a CLI-tool or js/ts package.
 
 ## Install
 

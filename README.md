@@ -7,7 +7,11 @@ The password based encryption/decryption tool. Allows to encrypt string values o
 
 ## Install
 
-Make sure you have added `@andr-ll:registry=https://npm.pkg.github.com` to `~/.npmrc` file before installation.
+Make sure you have added registry configuration to `~/.npmrc` file before installation.
+
+```bash
+echo '@andr-ll:registry=https://npm.pkg.github.com' >> ~/.npmrc
+```
 
 ```bash
 # For cli usage

@@ -1,6 +1,6 @@
 {
   "name": "@andr-ll/cryl",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "license": "ISC",
   "description": "A password encryption/decryption cli tool",
   "keywords": [

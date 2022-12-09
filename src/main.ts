@@ -2,7 +2,6 @@ import { parseArgs } from './utils/parseArgs';
 import { MainOptions } from './types';
 import { encryptOrDecrypt } from './encryption';
 import { readHelpFile } from './utils/readHelpFile';
-import { EncryptionType } from './utils/constants';
 
 export const main = async (
   options: MainOptions,
@@ -28,29 +27,3 @@ export const main = async (
     throw error;
   }
 };
-
-export const libBuilder =
-  (type: EncryptionType) =>
-  (value: string, password: string, outputFile?: string) => {
-    return main({
-      type,
-      values: {
-        value,
-        password,
-        outputFile,
-      },
-    });
-  };
-
-export const libFileBuilder =
-  (type: EncryptionType) =>
-  (inputFile: string, password: string, outputFile?: string) => {
-    return main({
-      type,
-      values: {
-        password,
-        inputFile,
-        outputFile,
-      },
-    });
-  };

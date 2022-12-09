@@ -1,6 +1,6 @@
 {
   "name": "@andr-ll/cryl",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "ISC",
   "description": "A password encryption/decryption cli tool",
   "keywords": [
@@ -26,7 +26,6 @@
     "help"
   ],
   "scripts": {
-    "start": "ts-node ./src",
     "build": "run-s build:lib build:bin",
     "build:lib": "tsc",
     "build:bin": "./scripts/build.sh",
@@ -37,8 +36,7 @@
     "lint:check": "eslint '**/*.ts'",
     "spell": "cspell '**/*'",
     "version:check": "ts-node ./scripts/version_check.ts",
-    "husky:init": "./scripts/add_husky.sh",
-    "init": "run-s build husky:init"
+    "husky:init": "./scripts/add_husky.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

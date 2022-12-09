@@ -13,6 +13,8 @@ Make sure you have added registry configuration to `~/.npmrc` file before instal
 echo '@andr-ll:registry=https://npm.pkg.github.com' >> ~/.npmrc
 ```
 
+Then install the package:
+
 ```bash
 # For cli usage
 npm i -g @andr-ll/cryl

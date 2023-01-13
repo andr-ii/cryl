@@ -1,26 +1,30 @@
-# @andr-ll/cryl
+# @andr-ii/cryl
 
-[![Pull Request CI](https://github.com/andr-ll/cryl/actions/workflows/continuous_integration.yml/badge.svg)](https://github.com/andr-ll/cryl/actions/workflows/continuous_integration.yml)
-[![Node.js Package Release](https://github.com/andr-ll/cryl/actions/workflows/release.yml/badge.svg)](https://github.com/andr-ll/cryl/actions/workflows/release.yml)
+![GitHub Packages][pkg-img]
+[![Package Build][build-img]][build-url]
 
 The password based encryption/decryption tool. Allows to encrypt string values or files. Available as a CLI-tool or js/ts package.
 
 ## Install
 
-Make sure you have added registry configuration to `~/.npmrc` file before installation.
+> **Note**
+>
+> Make sure you have added registry configuration and your GitHub token
+> to `~/.npmrc` file before installation.
 
 ```bash
-echo '@andr-ll:registry=https://npm.pkg.github.com' >> ~/.npmrc
+echo '//npm.pkg.github.com/:_authToken=$TOKEN
+@andr-ii:registry=https://npm.pkg.github.com' >> ~/.npmrc
 ```
 
 Then install the package:
 
 ```bash
 # For cli usage
-npm i -g @andr-ll/cryl
+npm i -g @andr-ii/cryl
 
 # For npm package usage
-npm i @andr-ll/cryl
+npm i @andr-ii/cryl
 ```
 
 ## CLI Usage
@@ -62,7 +66,7 @@ If error occurred during execution - it will be thrown.
 ### A simple string encryption:
 
 ```ts
-import { encrypt } from '@andr-ll/cryl';
+import { encrypt } from '@andr-ii/cryl';
 
 const encryptedString = await encrypt('some-string', 'password');
 
@@ -70,7 +74,7 @@ console.log(encryptedString); // 'szCiRKg7LwIn27uBOFpBaQ=='
 ```
 
 ```ts
-import { encrypt } from '@andr-ll/cryl';
+import { encrypt } from '@andr-ii/cryl';
 
 await encrypt('some-string', 'password', 'encrypted.key'); // writes result to 'encrypted.key' file;
 ```
@@ -78,7 +82,7 @@ await encrypt('some-string', 'password', 'encrypted.key'); // writes result to '
 ### A file encryption:
 
 ```ts
-import { encryptFile } from '@andr-ll/cryl';
+import { encryptFile } from '@andr-ii/cryl';
 
 const encryptedFile = await encryptFile('./package.json', 'password');
 
@@ -86,7 +90,7 @@ console.log(encryptedFile); // 'encrypted package.json file'
 ```
 
 ```ts
-import { encryptFile } from '@andr-ll/cryl';
+import { encryptFile } from '@andr-ii/cryl';
 
 await encryptFile('./package.json', 'password', 'encrypted.key'); // writes result to 'encrypted.key' file;
 ```
@@ -96,7 +100,7 @@ await encryptFile('./package.json', 'password', 'encrypted.key'); // writes resu
 ### A simple string decryption:
 
 ```ts
-import { decrypt } from '@andr-ll/cryl';
+import { decrypt } from '@andr-ii/cryl';
 
 const decryptedValue = await decrypt('szCiRKg7LwIn27uBOFpBaQ==', 'password');
 
@@ -104,7 +108,7 @@ console.log(decryptedValue); // 'some-string'
 ```
 
 ```ts
-import { decrypt } from '@andr-ll/cryl';
+import { decrypt } from '@andr-ii/cryl';
 
 await decrypt('szCiRKg7LwIn27uBOFpBaQ==', 'password', 'result.log'); // writes result to 'result.log' file;
 ```
@@ -112,7 +116,7 @@ await decrypt('szCiRKg7LwIn27uBOFpBaQ==', 'password', 'result.log'); // writes r
 ### A file decryption:
 
 ```ts
-import { decryptFile } from '@andr-ll/cryl';
+import { decryptFile } from '@andr-ii/cryl';
 
 const decryptedFile = await decryptFile('./encrypted.key', 'password');
 
@@ -120,7 +124,11 @@ console.log(decryptedFile); // 'decrypted file'
 ```
 
 ```ts
-import { decryptFile } from '@andr-ll/cryl';
+import { decryptFile } from '@andr-ii/cryl';
 
 await decryptFile('./encrypted.key', 'password', 'result.log'); // writes result to 'result.log' file;
 ```
+
+[build-img]: https://github.com/andr-ii/cryl/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/andr-ii/cryl/actions/workflows/build.yml
+[pkg-img]: https://img.shields.io/badge/version-0.2.5-blue

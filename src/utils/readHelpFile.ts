@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import * as fs from 'fs';
 import { PATH_TO_HELP_FILE } from './constants';
 

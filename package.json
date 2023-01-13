@@ -1,7 +1,7 @@
 {
   "name": "@andr-ii/cryl",
   "version": "0.2.5",
-  "license": "ISC",
+  "license": "MIT",
   "description": "A password encryption/decryption cli tool",
   "keywords": [
     "encryption",
@@ -9,7 +9,7 @@
     "node.js",
     "cli"
   ],
-  "author": "andr-ii",
+  "author": "Andrii Lytovchenko <andr.lyt.dev@gmail.com>",
   "preferGlobal": true,
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 export enum EncryptionType {
   Encrypt = 'enc',
   Decrypt = 'dec',

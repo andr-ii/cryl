@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { Options } from '../types';
 import { EncryptionType } from '../utils/constants';
 import { validateOptions } from './validator';

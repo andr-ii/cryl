@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { parseArgs } from './utils/parseArgs';
 import { MainOptions } from './types';
 import { encryptOrDecrypt } from './encryption';

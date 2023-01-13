@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { Readable } from 'stream';
 import { Decipher } from 'crypto';
 

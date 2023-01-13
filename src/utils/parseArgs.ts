@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { EncryptionType, FlagsMap } from './constants';
 import { Options } from '../types';
 

@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { main } from './main';
 import { EncryptionType } from './utils/constants';
 

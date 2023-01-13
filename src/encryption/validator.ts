@@ -1,3 +1,8 @@
+/**
+ * @author Andrii Lytovchenko <andr.lyt.dev@gmail.com>
+ * @license MIT
+ */
+
 import { Options } from '../types';
 import * as fs from 'fs';
 import { Readable } from 'stream';

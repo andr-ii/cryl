@@ -3,6 +3,8 @@
  * @license MIT
  */
 
+import * as path from 'path';
+
 export enum EncryptionType {
   Encrypt = 'enc',
   Decrypt = 'dec',
@@ -25,4 +27,4 @@ export const FlagValues = {
 export const FlagsMap = new Map(Object.entries(FlagValues));
 
 export const ALGORITHM = 'aes-192-cbc';
-export const PATH_TO_HELP_FILE = './help';
+export const PATH_TO_HELP_FILE = path.join(__dirname, '../../help');

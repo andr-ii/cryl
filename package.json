@@ -1,6 +1,6 @@
 {
   "name": "@andr-ii/cryl",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "license": "MIT",
   "description": "A password encryption/decryption cli tool",
   "keywords": [

@@ -138,7 +138,7 @@ await decryptFile('./encrypted.key', 'password', 'result.log'); // writes result
 
 [build-img]: https://github.com/andr-ii/cryl/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/andr-ii/cryl/actions/workflows/build.yml
-[pkg-img]: https://img.shields.io/badge/version-0.3.0-blue
+[pkg-img]: https://img.shields.io/badge/version-0.3.1-blue
 [pkg-url]: https://github.com/andr-ii/cryl/pkgs/npm/cryl
 [coverage-img]: https://coveralls.io/repos/github/andr-ii/cryl/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/andr-ii/cryl?branch=master

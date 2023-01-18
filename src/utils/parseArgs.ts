@@ -9,11 +9,12 @@ import { Options } from '../types';
 export const parseArgs = () => {
   const type = process.argv[2] as EncryptionType;
 
-  if (
-    !Object.values(EncryptionType).includes(type) &&
-    (type as string) !== '--help'
-  ) {
-    throw new Error(`Unsupported argument: ${type}`);
+  if ((type as string) === '--help') {
+    return { type, values: {} };
+  }
+
+  if (!Object.values(EncryptionType).includes(type)) {
+    throw new Error(`Unsupported argument: "${type}".`);
   }
 
   const allArgs = process.argv.slice(3);
@@ -26,7 +27,7 @@ export const parseArgs = () => {
     const flagKey = FlagsMap.get(flag);
 
     if (flagKey === undefined) {
-      throw new Error(`Unsupported flag ${flag}`);
+      throw new Error(`Unsupported flag: "${flag}".`);
     }
 
     parsedFlags[flagKey] = value;

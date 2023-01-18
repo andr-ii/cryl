@@ -9,7 +9,7 @@ import { encryptOrDecrypt } from './encryption';
 import { readHelpFile } from './utils/readHelpFile';
 
 export const main = async (
-  options: MainOptions,
+  options?: MainOptions,
 ): Promise<string | undefined> => {
   try {
     const { type, values } = options == null ? parseArgs() : options;

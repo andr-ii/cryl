@@ -6,7 +6,7 @@
 import { main } from './main';
 import { EncryptionType } from './utils/constants';
 
-type SharedArguments = [password: string, outputFile: string | undefined];
+type SharedArguments = [password: string, outputFile?: string];
 
 type RawValueFunction = (
   ...args: [value: string, ...shared: SharedArguments]
@@ -28,7 +28,7 @@ export function libBuilder(
   options?: { isFile: boolean },
 ) {
   return (value: string, password: string, outputFile?: string) => {
-    const inputType = options?.isFile ? { isFile: value } : { value };
+    const inputType = options?.isFile ? { inputFile: value } : { value };
 
     return main({
       type,

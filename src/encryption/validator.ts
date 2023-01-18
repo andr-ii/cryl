@@ -23,16 +23,16 @@ export const validateOptions = (
   const outputFile =
     options.outputFile == null && isPackage ? '/dev/null' : options.outputFile;
 
-  if (type === EncryptionType.Encrypt && (password?.trim().length ?? '') < 6) {
-    throw new Error('Password must be longer than 6 characters');
+  if (password === undefined) {
+    throw new Error(`Password must be specified! Received: "${password}".`);
+  }
+
+  if (type === EncryptionType.Encrypt && password.trim().length < 6) {
+    throw new Error('Password must be longer than 6 characters.');
   }
 
   if (value != null && inputFile != null) {
     throw new Error('Specify only one option: either input file or value.');
-  }
-
-  if (password === undefined) {
-    throw new Error(`Unsupported password value: ${password}`);
   }
 
   try {
@@ -60,6 +60,6 @@ export const validateOptions = (
 
     return { input, output, cipherOrDecipher };
   } catch (error) {
-    throw new Error(`Validation error: ${error.message}`);
+    throw new Error(`Validation error: "${error.message}".`);
   }
 };

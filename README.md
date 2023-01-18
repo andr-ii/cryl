@@ -6,7 +6,7 @@
 
 The password based encryption/decryption tool. Allows to encrypt string values or files. Available as a CLI-tool or js/ts package.
 
-> **Warning** 
+> **Warning**
 >
 > **Do not use in the real work-related projects!**
 >

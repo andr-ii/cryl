@@ -136,7 +136,7 @@ import { decryptFile } from '@andr-ii/cryl';
 await decryptFile('./encrypted.key', 'password', 'result.log'); // writes result to 'result.log' file;
 ```
 
-[build-img]: https://github.com/andr-ii/cryl/actions/workflows/build.yml/badge.svg
+[build-img]: https://img.shields.io/github/actions/workflow/status/andr-ii/cryl/build.yml?logo=github
 [build-url]: https://github.com/andr-ii/cryl/actions/workflows/build.yml
 [pkg-img]: https://img.shields.io/badge/package-0.3.3-blue?logo=github
 [pkg-url]: https://github.com/andr-ii/cryl/pkgs/npm/cryl

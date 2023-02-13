@@ -1,8 +1,9 @@
 # cryl
 
-[![GitHub Packages][pkg-img]][pkg-url]
-[![Package Build][build-img]][build-url]
-[![Coverage Status][coverage-img]][coverage-url]
+[![GitHub Package][pkg-img]][pkg-url]
+[![Build][build-img]][build-url]
+[![Coverage][coverage-img]][coverage-url]
+[![License][license-pic]][license-url]
 
 The password based encryption/decryption tool. Allows to encrypt string values or files. Available as a CLI-tool or js/ts package.
 
@@ -142,3 +143,5 @@ await decryptFile('./encrypted.key', 'password', 'result.log'); // writes result
 [pkg-url]: https://github.com/andr-ii/cryl/pkgs/npm/cryl
 [coverage-img]: https://img.shields.io/coverallsCoverage/github/andr-ii/cryl?label=coverage&logo=jest
 [coverage-url]: https://coveralls.io/github/andr-ii/cryl?branch=master
+[license-pic]: https://img.shields.io/github/license/andr-ii/cryl?color=blue&label=%C2%A9%20license
+[license-url]: https://github.com/andr-ii/cryl/blob/master/LICENSE
